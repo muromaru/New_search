@@ -30,9 +30,18 @@ public class FamilyMart extends Shop {
         getSoup(this.url);
         String[] str1 = getElementsAll();
         Log.d("abc", "aaa222");
-        //bb[0] = getText(str1);
+        bb[0] = str1;
 
+        Elements ele = getElementsP();
+        String[] urlImage = getLinkImage(ele);
+        for(int i=0;i<urlImage.length;i++){
+            urlImage[i] = "https://www.family.co.jp" + urlImage[i];
+            Log.d("abc", urlImage[i]);
+        }
+        image = getImage(urlImage);
+        MainActivity.setImageValues(image);
 
+        Log.d("abc", "f.flow finish");
         return bb;
     }
 
@@ -40,9 +49,25 @@ public class FamilyMart extends Shop {
 
 
 
-    String[] getText(Elements ele){
-
-        return a;
+    String[] getLinkImage(Elements ele){
+        String url = "";
+        String url2 = "";
+        int cnt = 0;
+        Elements ele2 = ele.select("img");
+        String[] str = new String[ele2.size()];
+        for (int i = 0; i < ele2.size(); i++) {
+            url = ele2.get(i).attr("src");
+            url2 = ele2.get(i).attr("alt");
+            if(url.equals(url2)) {
+                str[cnt] = url;
+                cnt += 1;
+            }
+        }
+        String[] str2 = new String[cnt];
+        for (int i = 0;i<cnt;i++){
+            str2[i] = str[i];
+        }
+        return str2;
     }
 
     Elements getElementsCate() throws IOException{
