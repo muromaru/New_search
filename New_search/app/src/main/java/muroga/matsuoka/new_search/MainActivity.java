@@ -12,6 +12,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Spinner;
+import android.widget.ArrayAdapter;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
 
 
 
@@ -23,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     //private ImageView imageView0;
     private static String[][] textValues;
     private static Bitmap[] imageValues;
+    private final String[] spinnerArea = {"北海道", "東北", "関東", "甲信越","東海","近畿","中国","四国","九州","沖縄"};
 
 
 
@@ -98,6 +103,32 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("abc", "Exe5");
                 String str = String.join("\n", textValues[5]);
                 textView.setText(str);
+            }
+        });
+
+        Spinner spinner = findViewById(R.id.spinner);
+
+        ArrayAdapter<String> adapter
+                = new ArrayAdapter<>(this,
+                android.R.layout.simple_spinner_item, spinnerArea);
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        spinner.setAdapter(adapter);
+
+        spinner.setOnItemSelectedListener(new OnItemSelectedListener() {
+            //　アイテムが選択された時
+            @Override
+            public void onItemSelected(AdapterView<?> parent,
+                                       View view, int position, long id) {
+                Spinner spinner = (Spinner)parent;
+                String item = (String)spinner.getSelectedItem();
+                textView.setText(item);
+            }
+
+            //　アイテムが選択されなかった
+            public void onNothingSelected(AdapterView<?> parent) {
+                //
             }
         });
     }

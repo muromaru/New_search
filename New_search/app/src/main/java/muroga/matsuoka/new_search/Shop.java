@@ -58,7 +58,10 @@ public class Shop {
         Elements elements = document.select("h3");
         return elements;
     }
-
+    Elements getElementsFlex() throws IOException{
+        Elements elements = document.select("[class=flex_wrap]");
+        return elements;
+    }
     Elements getElementsActive() throws IOException{
         Elements elements = document.select("[class=active]");
         return elements;

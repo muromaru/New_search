@@ -19,8 +19,14 @@ public class SevenEleven extends Shop {
         this.url = "https://www.sej.co.jp";
     }
 
-    public void flow() throws IOException {
+    public String[][] flow() throws IOException {
         getInfo();
+        String url1 = "/products/a/thisweek";
+        String url2 = "/products/a/nextweek";
+        String url_h = "/area/hokkaido";
+        getSoup(this.url+url1+url_h);
+        getElementsFlex();
+        return bb;
     }
 
 }

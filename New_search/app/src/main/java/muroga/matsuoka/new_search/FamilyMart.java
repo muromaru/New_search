@@ -36,7 +36,6 @@ public class FamilyMart extends Shop {
         String[] urlImage = getLinkImage(ele);
         for(int i=0;i<urlImage.length;i++){
             urlImage[i] = "https://www.family.co.jp" + urlImage[i];
-            Log.d("abc", urlImage[i]);
         }
         image = getImage(urlImage);
         MainActivity.setImageValues(image);

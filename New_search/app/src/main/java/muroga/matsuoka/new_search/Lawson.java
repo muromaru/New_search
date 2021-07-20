@@ -136,6 +136,18 @@ public class Lawson extends Shop {
         return url;
     }
 
+    String[] getLinkImage(Elements ele){
+        String url = "";
+        Elements ele2 = ele.select("img");
+        Elements ele3 = ele2.select("[height=235]");
+        String[] str = new String[ele3.size()];
+        for (int i = 0; i < ele3.size(); i++) {
+            url = ele3.get(i).attr("src");
+            str[i] = url;
+        }
+        return str;
+    }
+
     String[] getContent(Elements e) throws IOException {
         Calendar cal = Calendar.getInstance();
         int year = cal.get(Calendar.YEAR);
