@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        spinner.setAdapter(adapter);
+        //spinner.setAdapter(adapter);
 
         spinner.setOnItemSelectedListener(new OnItemSelectedListener() {
             //　アイテムが選択された時
