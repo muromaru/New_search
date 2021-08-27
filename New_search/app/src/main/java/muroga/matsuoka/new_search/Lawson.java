@@ -121,7 +121,6 @@ public class Lawson extends Shop {
         String url = "";
 
         Elements s1 = soup.select("a");
-        //Log.d("abc", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         for (int i = 0; i < s1.size(); i++) {
             if (str1.equals(s1.get(i).text())){
                 //Log.d("abc", s1.get(i).text());
