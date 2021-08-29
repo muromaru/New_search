@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -22,6 +23,7 @@ public class MurogaActivity2 extends AppCompatActivity {
         //Intent intent = getIntent();
         TextView textView = findViewById(R.id.text_view);
         textView.setText("あああああああ");
+        textView.setTextColor(Color.RED);
 
         Button button = (Button)findViewById(R.id.myButton);
         button.setOnClickListener(

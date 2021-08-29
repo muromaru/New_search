@@ -135,10 +135,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="76dp"
         android:layout_marginLeft="76dp"
-        android:layout_marginTop="532dp"
+        android:layout_marginTop="432dp"
         android:text="Button4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
     <Button
         android:id="@+id/button5"
@@ -146,11 +147,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="288dp"
         android:layout_marginLeft="288dp"
-        android:layout_marginTop="460dp"
-        android:text="Button5"
+        android:layout_marginTop="432dp"
+        android:background="@drawable/button_customize"
+        android:text="next page"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <Spinner
         android:id="@+id/spinner"
