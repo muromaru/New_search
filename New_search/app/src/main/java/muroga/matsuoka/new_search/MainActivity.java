@@ -10,6 +10,7 @@ import android.util.Log;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Spinner;
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         Button button4 = findViewById(R.id.button4);
         Button button5 = findViewById(R.id.button5);
 
+
         button0.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
@@ -58,6 +60,18 @@ public class MainActivity extends AppCompatActivity {
                 String str = String.join("\n", textValues[0]);
                 textView.setText(str);
                 imageView0.setImageBitmap(imageValues[0]);
+                ImageButton imgbutton = findViewById(R.id.imagebutton0);
+                imgbutton.setImageBitmap(imageValues[0]);
+                imgbutton.setOnClickListener(new View.OnClickListener() {
+                    @RequiresApi(api = Build.VERSION_CODES.O)
+                    @Override
+                    public void onClick(View v) {
+                        Log.d("abc", "bbbbbbbbbbb");
+                        Intent intent = new Intent(MainActivity.this, MurogaActivity2.class);
+                        intent.putExtra("TEst", "Sample Message");
+                        startActivity(intent);
+                    }
+                });
             }
         });
         button1.setOnClickListener(new View.OnClickListener() {
