@@ -34,33 +34,38 @@
         android:id="@+id/imageview1"
         android:layout_width="140dp"
         android:layout_height="80dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintTop_toBottomOf="@+id/button1" />
+        app:layout_constraintTop_toBottomOf="@+id/button1"
+        app:layout_constraintStart_toStartOf="@+id/button1"
+        app:layout_constraintEnd_toEndOf="@+id/button1"/>
 
 
     <ImageView
         android:id="@+id/imageview2"
         android:layout_width="140dp"
         android:layout_height="80dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="@+id/button2"/>
+
 
     <ImageView
         android:id="@+id/imageview3"
         android:layout_width="140dp"
-        android:layout_height="80dp"
+        android:layout_height="70dp"
         android:scaleType="centerCrop"
         app:layout_constraintTop_toBottomOf="@+id/button3"
         app:layout_constraintStart_toStartOf="@+id/button3"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="@+id/button3"/>
+
 
 
     <ImageView
         android:id="@+id/imageview4"
         android:layout_width="140dp"
         android:layout_height="80dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        app:layout_constraintStart_toStartOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="@+id/button4"/>
 
     <ImageView
         android:id="@+id/imageview5"

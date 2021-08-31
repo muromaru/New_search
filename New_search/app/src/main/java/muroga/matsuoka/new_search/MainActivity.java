@@ -115,6 +115,12 @@ public class MainActivity extends AppCompatActivity {
                 textView.setText(str);
                 textView.setText(str);
                 imageView4.setImageBitmap(imageValues[4]);
+                ImageView image4 = findViewById(R.id.imageview4);   //表示非表示
+                if (image4.getVisibility() != View.VISIBLE) {
+                    image4.setVisibility(View.VISIBLE);
+                } else {
+                    image4.setVisibility(View.INVISIBLE);　
+                }
             }
         });
         button5.setOnClickListener(new View.OnClickListener() {
