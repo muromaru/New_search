@@ -54,7 +54,13 @@ public class MurogaActivity2 extends AppCompatActivity {
         Bitmap bmp3 = BitmapFactory.decodeResource(r, R.drawable.star3);
 
         ImageView image1 = findViewById(R.id.imageview_1);
+        ImageView image2 = findViewById(R.id.imageview_2);
+        ImageView image3 = findViewById(R.id.imageview_3);
+
         image1.setImageBitmap(bmp1);
+        image2.setImageBitmap(bmp2);
+        image3.setImageBitmap(bmp3);
+
 
 
     }
