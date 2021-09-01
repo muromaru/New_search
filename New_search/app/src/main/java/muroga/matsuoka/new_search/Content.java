@@ -18,14 +18,15 @@ public class Content{
         //Log.d("abc", "seven_eleven start");
         //String[][] a = s.flow();
 
-        //FamilyMart f = new FamilyMart();
-        //Log.d("abc", "family_mart start");
-        //String[][] a = f.flow();
-        //Log.d("abc",""+a[0][50]);
+        FamilyMart f = new FamilyMart();
+        Log.d("abc", "family_mart start");
+        String[][] a = f.flow();
+        Log.d("abc",""+a[0][50]);
 
-        Lawson l = new Lawson();
-        Log.d("abc", "lawson start!!!");
-        String[][] a = l.flow();
+        //Lawson l = new Lawson();
+        //Log.d("abc", "lawson start!!!");
+        //String[][] a = l.flow();
+
         return a;
     }
 

@@ -4,26 +4,35 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
 
 public class MurogaActivity2 extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_muroga2);
 
+
+
         //Intent intent = getIntent();
         TextView textView = findViewById(R.id.text_view);
         textView.setText("あああああああ");
         textView.setTextColor(Color.RED);
+
+
 
         Button button = (Button)findViewById(R.id.myButton);
         button.setOnClickListener(
@@ -38,6 +47,16 @@ public class MurogaActivity2 extends AppCompatActivity {
                     }
                 }
         );
+
+        Resources r = getResources();
+        Bitmap bmp1 = BitmapFactory.decodeResource(r, R.drawable.star);
+        Bitmap bmp2 = BitmapFactory.decodeResource(r, R.drawable.star2);
+        Bitmap bmp3 = BitmapFactory.decodeResource(r, R.drawable.star3);
+
+        ImageView image1 = findViewById(R.id.imageview_1);
+        image1.setImageBitmap(bmp1);
+
+
     }
 
     @Override
@@ -75,6 +94,7 @@ public class MurogaActivity2 extends AppCompatActivity {
         super.onDestroy();
         Log.d("LifeCycle", "onDestroy");
     }
+
 }
 
 

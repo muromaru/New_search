@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
                 if (image4.getVisibility() != View.VISIBLE) {
                     image4.setVisibility(View.VISIBLE);
                 } else {
-                    image4.setVisibility(View.INVISIBLE);　
+                    image4.setVisibility(View.INVISIBLE);
                 }
             }
         });
