@@ -1,5 +1,6 @@
 package muroga.matsuoka.new_search;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
@@ -8,10 +9,12 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.view.View.OnClickListener;
@@ -58,6 +61,21 @@ public class MurogaActivity2 extends AppCompatActivity {
         ImageView image3 = findViewById(R.id.imageview_3);
 
         image1.setImageBitmap(bmp1);
+//        image1.setImageBitmap(bmp1);
+//        ImageButton imgbutton = findViewById(R.id.imagebutton0);
+//        imgbutton.setImageBitmap(bmp1);
+//        imgbutton.setOnClickListener(new View.OnClickListener() {
+//           @RequiresApi(api = Build.VERSION_CODES.O)
+//            @Override
+//            public void onClick(View v) {
+//                Log.d("abc", "cccccccccc");
+//                Intent intent = new Intent(MurogaActivity2.this, MurogaActivity3.class);
+//               intent.putExtra("TEst", "Sample Message");
+//                startActivity(intent);
+//            }
+//        });
+
+
         image2.setImageBitmap(bmp2);
         image3.setImageBitmap(bmp3);
 
