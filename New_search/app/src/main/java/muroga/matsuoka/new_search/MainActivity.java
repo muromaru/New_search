@@ -82,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
                 String str = String.join("\n", textValues[1]);
                 textView.setText(str);
                 imageView1.setImageBitmap(imageValues[1]);
+
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {
