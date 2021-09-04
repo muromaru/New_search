@@ -28,7 +28,8 @@ public class FamilyMart extends Shop {
         getInfo();
         Log.d("abc", "aaa111");
         getSoup(this.url);
-        String[] str1 = getElementsAll();
+        String[] str1 = getElementsTxTt();
+        Log.d("abc", str1[0]);
         Log.d("abc", "aaa222");
         bb[0] = str1;
 
@@ -84,7 +85,7 @@ public class FamilyMart extends Shop {
         Elements elements = document.select("[class=ly-mod-infoset4-txt]");
         return elements;
     }
-    String[] getElementsAll() throws IOException{
+    String[] getElementsTxTt() throws IOException{
         Document document = getDocument();
         Elements elements = document.select("[class=ly-mod-infoset4-txt],[class=ly-mod-infoset4-ttl]");
         String[] a = new String[100];
