@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         Button button3 = findViewById(R.id.button3);
         Button button4 = findViewById(R.id.button4);
         Button button5 = findViewById(R.id.button5);
+        Button button6 = findViewById(R.id.button6);
 
 
         button0.setOnClickListener(new View.OnClickListener() {
@@ -133,6 +134,16 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("abc", "aaaaaaaaaaaaaaaaa");
                 Intent intent = new Intent(MainActivity.this, MurogaActivity2.class);
                 intent.putExtra("TEst", "Sample Message");
+                startActivity(intent);
+            }
+        });
+        button6.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
+            @Override
+            public void onClick(View v) {
+                Log.d("abc", "Exe6");
+                Intent intent = new Intent(getApplication(), MatsuokaActivity1.class);
+//                intent.putExtra("TEst", "Sample Message");
                 startActivity(intent);
             }
         });
