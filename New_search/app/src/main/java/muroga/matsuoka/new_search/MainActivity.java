@@ -22,7 +22,7 @@ import android.widget.AdapterView.OnItemSelectedListener;
 public class MainActivity extends AppCompatActivity {
 
     private TextView textView;
-    //private ImageView imageView0;
+    private ImageView imageView0;
     private static String[][] textValues;
     private static Bitmap[] imageValues;
     private final String[] spinnerArea = {"北海道", "東北", "関東", "甲信越", "東海", "近畿", "中国", "四国", "九州", "沖縄"};
@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Log.d("abc", "bbbbbbbbbbb");
+                        //MainActivity2.setImageValues2(imageValues[0]);
                         Intent intent = new Intent(MainActivity.this, MurogaActivity2.class);
                         intent.putExtra("TEst", "Sample Message");
                         startActivity(intent);
@@ -74,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
+
         button1.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
@@ -82,14 +84,15 @@ public class MainActivity extends AppCompatActivity {
                 String str = String.join("\n", textValues[1]);
                 textView.setText(str);
                 imageView1.setImageBitmap(imageValues[1]);
+
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onClick(View v) {
-                Log.d("abc", "Exe2");
-                String str = String.join("\n", textValues[2]);
+                Log.d("abc", "Exe2");   //Stringは「文字列」
+                String str = String.join("\n", textValues[2]);  //二次元配列であるtextValueを一次元にがっちゃんこ。
                 textView.setText(str);
                 imageView2.setImageBitmap(imageValues[2]);
 
@@ -205,15 +208,17 @@ public class MainActivity extends AppCompatActivity {
         Log.v("LifeCycle", "onDestroy");
     }
 
-
-    public static void setTextValues (String[][]t){
-        textValues = t;
+    //publicなのでどこからでも使える。
+    public static void setTextValues (String[][]t){  //String[][]tは引数。tという名前の二次元配列
+        textValues = t; //二次元配列tをtextValuesに入れた。
+        Log.d("abc", t[0][0]);
         //final TextView textView1;
         //textView1 = findViewById(R.id.textview);
         //textView1.setText("OK!!!!!");
     }
 
     public static void setImageValues (Bitmap[]i){
+
         imageValues = i;
     }
 

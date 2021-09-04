@@ -23,6 +23,9 @@ import android.widget.Toast;
 public class MurogaActivity2 extends AppCompatActivity {
 
 
+    private static Bitmap image2;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +37,7 @@ public class MurogaActivity2 extends AppCompatActivity {
         TextView textView = findViewById(R.id.text_view);
         textView.setText("あああああああ");
         textView.setTextColor(Color.RED);
+        Log.d("abc","abababababababaababab");
 
 
 
@@ -61,7 +65,6 @@ public class MurogaActivity2 extends AppCompatActivity {
         ImageView image3 = findViewById(R.id.imageview_3);
 
         image1.setImageBitmap(bmp1);
-//        image1.setImageBitmap(bmp1);
 //        ImageButton imgbutton = findViewById(R.id.imagebutton0);
 //        imgbutton.setImageBitmap(bmp1);
 //        imgbutton.setOnClickListener(new View.OnClickListener() {
@@ -77,6 +80,7 @@ public class MurogaActivity2 extends AppCompatActivity {
 
 
         image2.setImageBitmap(bmp2);
+//        image3.setImageBitmap(imageValues2[3]);
         image3.setImageBitmap(bmp3);
 
 
@@ -118,6 +122,12 @@ public class MurogaActivity2 extends AppCompatActivity {
         super.onDestroy();
         Log.d("LifeCycle", "onDestroy");
     }
+
+    public static void setImageValues2 (Bitmap i){
+
+        image2 = i;
+    }
+
 
 }
 
