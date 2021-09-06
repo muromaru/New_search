@@ -39,7 +39,9 @@ public class FamilyMart extends Shop {
             urlImage[i] = "https://www.family.co.jp" + urlImage[i];
         }
         image = getImage(urlImage);
+//        MainActivity.setImageValues(image);
         MainActivity.setImageValues(image);
+        MatsuokaActivity1.setImageValues2(image);
 
         Log.d("abc", "f.flow finish");
         return bb;

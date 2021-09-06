@@ -55,36 +55,6 @@ public class MurogaActivity2 extends AppCompatActivity {
                 }
         );
 
-        Resources r = getResources();
-        Bitmap bmp1 = BitmapFactory.decodeResource(r, R.drawable.star);
-        Bitmap bmp2 = BitmapFactory.decodeResource(r, R.drawable.star2);
-        Bitmap bmp3 = BitmapFactory.decodeResource(r, R.drawable.star3);
-
-        ImageView image1 = findViewById(R.id.imageview_1);
-        ImageView image2 = findViewById(R.id.imageview_2);
-        ImageView image3 = findViewById(R.id.imageview_3);
-
-        image1.setImageBitmap(bmp1);
-//        ImageButton imgbutton = findViewById(R.id.imagebutton0);
-//        imgbutton.setImageBitmap(bmp1);
-//        imgbutton.setOnClickListener(new View.OnClickListener() {
-//           @RequiresApi(api = Build.VERSION_CODES.O)
-//            @Override
-//            public void onClick(View v) {
-//                Log.d("abc", "cccccccccc");
-//                Intent intent = new Intent(MurogaActivity2.this, MurogaActivity3.class);
-//               intent.putExtra("TEst", "Sample Message");
-//                startActivity(intent);
-//            }
-//        });
-
-
-        image2.setImageBitmap(bmp2);
-//        image3.setImageBitmap(imageValues2[3]);
-        image3.setImageBitmap(bmp3);
-
-
-
     }
 
     @Override
