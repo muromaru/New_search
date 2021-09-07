@@ -11,7 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity
+            android:name=".MatsuokaActivity2"
+            android:parentActivityName=".MatsuokaActivity1">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MatsuokaActivity1" />
+        </activity>
         <activity
             android:name=".MatsuokaActivity1"
             android:parentActivityName=".MainActivity"> <!-- 戻るボタンの設定 -->
@@ -19,7 +25,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-
         <activity
             android:name=".MurogaActivity2"
             android:parentActivityName=".MainActivity"> <!-- 戻るボタンの設定 -->
@@ -27,7 +32,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -82,6 +82,8 @@ public class Lawson extends Shop {
         }
         image = getImage(urlImage);
         MainActivity.setImageValues(image);
+        MatsuokaActivity2.setImageValues3(image);
+
 //        bb[6] = getContent(ele9);
 //        bb[7] = getContent(ele10);
         Log.d("abc", "l.flow finish");

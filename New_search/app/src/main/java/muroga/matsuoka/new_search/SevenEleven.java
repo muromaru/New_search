@@ -49,6 +49,7 @@ public class SevenEleven extends Shop {
         String[] urlImage = getLinkImage(ele);
         image = getImage(urlImage);
         MainActivity.setImageValues(image);
+        MatsuokaActivity2.setImageValues3(image);
 
         getSoup(this.url+url2+url3+url14);
         Elements ele3 = getElementsFlex();

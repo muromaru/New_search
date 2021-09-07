@@ -42,6 +42,7 @@ public class FamilyMart extends Shop {
 //        MainActivity.setImageValues(image);
         MainActivity.setImageValues(image);
         MatsuokaActivity1.setImageValues2(image);
+        MatsuokaActivity2.setImageValues3(image);
 
         Log.d("abc", "f.flow finish");
         return bb;
